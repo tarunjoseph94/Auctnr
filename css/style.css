@@ -1,0 +1,263 @@
+
+		body{
+			font-family: sans-serif;
+		}
+		.mt-15 {
+			margin-top: 15px !important; }
+
+		.mt-30 {
+			margin-top: 30px !important; }
+
+		.mt-50 {
+			margin-top: 50px !important; }
+
+		.mt-70 {
+			margin-top: 70px !important; }
+
+		.mt-100 {
+			margin-top: 100px !important; }
+
+		.mb-15 {
+			margin-bottom: 15px !important; }
+
+		.mb-30 {
+			margin-bottom: 30px !important; }
+
+		.mb-50 {
+			margin-bottom: 50px !important; }
+
+		.mb-70 {
+			margin-bottom: 70px !important; }
+
+		.mb-100 {
+			margin-bottom: 100px !important; }
+
+		.ml-15 {
+			margin-left: 15px !important; }
+
+		.ml-30 {
+			margin-left: 30px !important; }
+
+		.ml-50 {
+			margin-left: 50px !important; }
+
+		.mr-15 {
+			margin-right: 15px !important; }
+
+		.mr-30 {
+			margin-right: 30px !important; }
+
+		.mr-50 {
+			margin-right: 50px !important; }
+			.nopad{
+				padding:0px !important;}
+
+		/* Height */
+		.height-400 {
+			height: 400px !important; }
+
+		.height-500 {
+			height: 500px !important; }
+
+		.height-600 {
+			height: 600px !important; }
+
+		.height-700 	{
+			height: 700px !important; }
+
+		.height-800 {
+			height: 800px !important; }
+			.normargin
+			{
+				margin: 0px;
+			}
+				.btn {
+		  			background: #000;
+				    color: #fff;
+				 		}
+				.auctnr-nav ul li {
+		    list-style: none;
+				}
+				.auctnr-nav ul li a {
+		    text-decoration: none;
+				}
+				.auctnr-btn {
+		    display: inherit;
+				}
+				.header-area {
+		    margin-left: 50px;
+				margin-top: 50px;
+				}
+				.active.btn {
+		    background: #fbb710;
+				}
+				.auctnr-btn-group {
+		    display: grid;
+		    width: 155px;
+
+			}
+			.red-bg {
+		    background: red;
+		    min-height: 500px;
+			}
+			.short-box {
+		    background-color: green;
+			}
+				/* .long-box
+				{
+					background-color: blue;
+				} */
+				.long-box {
+		    height: 270px;
+		}
+		.short-box {
+		    height: 250px;
+		}
+		.short-box.card {
+    overflow: hidden;
+		}
+		.long-box.card {
+    overflow: hidden;
+		}
+		.card
+		{
+			border: none;
+		}
+.item-details {
+    position: absolute;
+    z-index: 5;
+    top: 35px;
+    left: 30px;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: black;
+    transition: .5s ease;
+		border-top: yellow 2px solid;
+}
+.item-img {
+    position: relative;
+
+}
+.item:hover .item-img {
+    opacity: 0.3;
+		transition: .5s ease;
+}
+.item:hover {
+    background: #000;
+    transition: .5s ease;
+}
+.item:hover .item-details {
+    display: block;
+    transition: .5s ease;
+		color:white;
+}
+.footer_area {
+    background: #252525;
+    color: white;
+		padding: 40px;
+}
+.footer-link ul li {
+    list-style: none;
+    display: inline;
+}
+.active a {
+    border-top: #fff300 3px solid;
+}
+
+.side {
+    color: black;
+		padding: 5px;
+}
+
+
+/*product image slider*/
+.product-slider
+{
+	position: relative;
+	    width: 500px;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/*End slider*/
+.product-title-heading {
+    border-top: yellow 5px solid;
+    width: 100px;
+}
+.side:hover {
+    cursor: pointer;
+}
