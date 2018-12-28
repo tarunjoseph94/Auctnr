@@ -1,30 +1,30 @@
-        <form method="POST" enctype="multipart/form-data">
-        Enter the product name
-        <input type="text" class="form-control" id="prod_name" />
-        Enter the product description
-        <textarea id="prod_description" class="form-control"></textarea>
-        Enter the starting price of the product
-        <input type="text" class="form-control" id="prod_price" />
-        Please Upload the thumbnail image
-        <br />
-        Only jpg and png extennsion files are allowed
-        <br />
-        <input type="file"   id="prod_img1">
-        <br />
-        Please Upload the second image
-        <br />
-        <input type="file" id="prod_img2">
-        <br />
-        Please Upload the third image
-        <br />
-        <input type="file" id="prod_img3">
-        <br />
-        <button class="btn active mt-30 mb-30" id="add-product-submit" >Add product</button>
-        <input type="reset" class="btn mt-30 mb-30" />
-      </form>
-      <div class="test">
+  <div class="col-sm-5">
+    <form method="POST" enctype="multipart/form-data">
+      Enter the product name
+      <input type="text" class="form-control" id="prod_name" />
+      Enter the product description
+      <textarea id="prod_description" class="form-control"></textarea>
+      Enter the starting price of the product
+      <input type="text" class="form-control" id="prod_price" />
+      Please Upload the thumbnail image
+      <br />
+      Only jpg and png extennsion files are allowed
+      <br />
+      <input type="file"   id="prod_img1">
+      <br />
+      Please Upload the second image
+      <br />
+      <input type="file" id="prod_img2">
+      <br />
+      Please Upload the third image
+      <br />
+      <input type="file" id="prod_img3">
+      <br />
+      <button class="btn active mt-30 mb-30" id="add-product-submit" >Add product</button>
+      <input type="reset" class="btn mt-30 mb-30" />
+    </form>
 
-      </div>';
+  </div>
 
 <script>
 

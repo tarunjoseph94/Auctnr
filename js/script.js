@@ -370,7 +370,7 @@ $(document).ready(function () {
           }});
 
   });
-  $('#add-product').on('click', function (event) {
+  $('#seller-add-product').on('click', function (event) {
 
     event.preventDefault();
           $.ajax({
@@ -380,7 +380,7 @@ $(document).ready(function () {
           }});
 
   });
-  $('#my-profile').on('click', function (event) {
+  $('#seller-my-profile').on('click', function (event) {
 
     event.preventDefault();
           $.ajax({
@@ -390,7 +390,7 @@ $(document).ready(function () {
           }});
 
   });
-  $('#my-products').on('click', function (event) {
+  $('#seller-my-products').on('click', function (event) {
 
     event.preventDefault();
           $.ajax({

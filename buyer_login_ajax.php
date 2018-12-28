@@ -31,17 +31,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if($flag==0)
   {
 
-    $sql1="SELECT buyer_password from buyer_details WHERE buyer_email='$email'";
+    $sql1="SELECT buyer_password,user_id_fk from buyer_details WHERE buyer_email='$email'";
     echo $sql1;
     $result=mysqli_query($conn,$sql1);
-    $user_pwd=$result->fetch_assoc();
-    $user_pwd=$user_pwd['buyer_password'];
-    echo $user_pwd;
-    echo " xyz ".$pwd;
+    $user=$result->fetch_assoc();
+    $user_pwd=$user['buyer_password'];
+    //echo $user_pwd;
+    //echo " xyz ".$pwd;
     if($pwd==$user_pwd)
     {
       $_SESSION['login_status']=1;
-      echo $_SESSION['login_status'];
+      $_SESSION['user_id']=$user['user_id_fk'];
+      //echo $_SESSION['login_status'];
     }
       else {
       echo "Error: ";

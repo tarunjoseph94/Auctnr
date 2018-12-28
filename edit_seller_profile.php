@@ -12,6 +12,7 @@ else {
   echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
 }
 ?>
+      <div class="col-sm-5">
         <form method="POST" >
           Update Your name
         <input type="text" class="form-control" value="<?php echo $seller['seller_name']; ?>" id="seller_name" />
@@ -28,6 +29,8 @@ else {
         <button class="btn active mt-30 mb-30" id="update-seller-submit" >Update</button>
         <input type="reset" class="btn mt-30 mb-30" />
       </form>
+
+      </div>
 
 <script>
 
@@ -142,7 +145,7 @@ else {
           {
             $("#test").html(result);
             alert(result);
-           window.location.replace("http://localhost/PHP-Project/sell-profile.php");
+           window.location.replace("http://localhost/PHP-Project/sell_profile.php");
           }
           });
         }
