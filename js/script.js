@@ -411,5 +411,15 @@ $(document).ready(function () {
 
   });
 
+  $('#buyer-my-profile').on('click', function (event) {
+
+    event.preventDefault();
+          $.ajax({
+          url: "edit_buyer_profile.php",
+          success:function(result){
+            $("#buyer_info").html(result);
+          }});
+
+  });
 
 });

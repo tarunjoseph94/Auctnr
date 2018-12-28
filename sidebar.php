@@ -18,7 +18,7 @@ echo '
               echo '
               <!-- Button Group -->
               <div class="auctnr-btn-group mt-30 mb-100">
-                  <a href="sell-profile.php" class="btn auctnr-btn mb-15 ">My profile</a>
+                  <a href="sell_profile.php" class="btn auctnr-btn mb-15 ">My profile</a>
                   <button id="logout" class="btn auctnr-btn active">Log Out</button>
               </div>
               ';
@@ -27,7 +27,7 @@ echo '
               echo '
               <!-- Button Group -->
               <div class="auctnr-btn-group mt-30 mb-100">
-                  <a href="buy-profile.php" class="btn auctnr-btn mb-15 ">My profile</a>
+                  <a href="buy_profile.php" class="btn auctnr-btn mb-15 ">My profile</a>
                   <button id="logout" class="btn auctnr-btn active">Log Out</button>
               </div>
               ';
