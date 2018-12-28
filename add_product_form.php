@@ -101,7 +101,7 @@
           {
             //alert("1");
 
-          window.location.replace("http://localhost/Trackr/product-details.php?id="+result);
+          window.location.replace("http://localhost/PHP-Project/product-details.php?id="+result);
           }
           });
         }});

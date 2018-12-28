@@ -118,7 +118,7 @@ $(document).ready(function () {
           {
             $("#test").html(result);
             alert("You account has been registered please log in");
-            window.location.replace("http://localhost/Trackr/login.php");
+            window.location.replace("http://localhost/PHP-Project/login.php");
           }
           });
         }
@@ -251,7 +251,7 @@ $(document).ready(function () {
           {
             $("#test").html(result);
             alert("You account has been registered please log in");
-            window.location.replace("http://localhost/Trackr/login_seller.php");
+            window.location.replace("http://localhost/PHP-Project/login_seller.php");
           }
           });
         }
@@ -303,7 +303,7 @@ $(document).ready(function () {
           success:function(result)
           {
             $("#test").html(result);
-            window.location.replace("http://localhost/Trackr/index.php");
+            window.location.replace("http://localhost/PHP-Project/index.php");
           }
           });
         }
@@ -354,7 +354,7 @@ $(document).ready(function () {
           success:function(result)
           {
             alert(result);
-            window.location.replace("http://localhost/Trackr/index.php");
+            window.location.replace("http://localhost/PHP-Project/index.php");
           }
           });
         }
@@ -366,7 +366,7 @@ $(document).ready(function () {
           url: "logout.php",
           success:function(result){
             $("#div1").html(result);
-            window.location.replace("http://localhost/Trackr/index.php");
+            window.location.replace("http://localhost/PHP-Project/index.php");
           }});
 
   });

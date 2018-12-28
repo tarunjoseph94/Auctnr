@@ -142,7 +142,7 @@ else {
           {
             $("#test").html(result);
             alert(result);
-           window.location.replace("http://localhost/Trackr/sell-profile.php");
+           window.location.replace("http://localhost/PHP-Project/sell-profile.php");
           }
           });
         }
