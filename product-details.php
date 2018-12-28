@@ -63,10 +63,12 @@
 										<h4><?php echo $product_price;?></h4>
 									</div>
 									<div class="product-bid">
-										<form>
+										<form method="post">
 											<h3>Your Bid</h3>
-											<input type="number" class ="form-control"/>
-											<input type="submit" name="bid" class="btn active  mt-15"  />
+											<input type="hidden" id="current-bid"/>
+											<input type="hidden" id="product-id" value="<?php echo $product_id; ?>"/>
+											<input type="number" id="new-bid" class ="form-control"/>
+											<button type="button" class="btn active mt-15" id="add-buyer-bid" name="button">Submit Bid</button>
 										</form>
 									</div>
 								</div>

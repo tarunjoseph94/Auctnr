@@ -12,8 +12,10 @@ if($result=mysqli_query($conn,$sql1))
   $product_image1=$product['product_image1'];
   $product_image2=$product['product_image2'];
   $product_image3=$product['product_image3'];
+
 }
 else {
     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
 }
+
 ?>

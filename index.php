@@ -30,7 +30,6 @@
 												<div class="item-img">
 													<img src="images/product-img/<?php echo $row['product_image1']?>" object-fit="contain" height="100%" width="100%" />
 												</div>
-											</a>
 											<div class="item-details">
 												<p>
 													From <?php echo $row['product_price']?>
@@ -39,6 +38,7 @@
 													<?php echo $row['product_name']?>
 												</p>
 											</div>
+										</a>
 										</div>
 									</div>
 								<?php } ?>
