@@ -18,4 +18,11 @@ else {
     echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
 }
 
+$sql1="SELECT current_bid FROM product_bid WHERE product_id='$product_id'";
+$result=mysqli_query($conn,$sql1);
+if(mysqli_num_rows($result) != 0 && mysqli_num_rows($result) != '' )
+{
+  $product=$result->fetch_assoc();
+  $product_price=$product['current_bid'];
+}
 ?>

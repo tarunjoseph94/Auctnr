@@ -422,21 +422,12 @@ $(document).ready(function () {
 
   });
   $('#add-buyer-bid').on('click', function (event) {
+        event.preventDefault();
     var id=document.getElementById("product-id").value;
     var bid=document.getElementById("new-bid").value;
     //Old bid needs to be checked
-    var formData=new FormData();
-    formData.append('id',id);
-    formData.append('bid',bid);
-     for (var pair of formData.entries()) {
-     console.log(pair[0]+ ', ' + pair[1]);
-    }
-    event.preventDefault();
           $.ajax({
-          type:"POST",
-          url: "update_product_bid.php",
-          data:formData,
-          processData: false,
+          url: "update_product_bid.php?id="+id+"&bid="+bid,
           success:function(result){
             alert(result);
           }});

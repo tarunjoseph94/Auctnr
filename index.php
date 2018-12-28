@@ -32,7 +32,7 @@
 												</div>
 											<div class="item-details">
 												<p>
-													From <?php echo $row['product_price']?>
+													From <?php echo $row['high_price']?>
 												</p>
 												<p>
 													<?php echo $row['product_name']?>

@@ -103,8 +103,7 @@
 			</div>
 		</div>
 	</body>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
+	
 	<script>
 	var slideIndex = 1;
 	showSlides(slideIndex);
