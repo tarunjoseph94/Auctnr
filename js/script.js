@@ -394,7 +394,7 @@ $(document).ready(function () {
 
     event.preventDefault();
           $.ajax({
-          url: "product_list.php",
+          url: "seller_product_list.php",
           success:function(result){
             $("#seller_info").html(result);
           }});

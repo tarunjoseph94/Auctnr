@@ -2,7 +2,9 @@
 include 'db-connect.php';
 session_start();
 $user_id=$_SESSION['user_id'];
-$sql1="SELECT product_image1,product_price,product_name FROM product_details WHERE user_id='$user_id'";
+$sql1="SELECT product_image1,product_price,product_name ,product_bid.current_bid
+FROM product_details LEFT JOIN product_bid ON
+product_details.product_id_pk=product_bid.product_id WHERE user_id='$user_id'";
 $result=mysqli_query($conn,$sql1);
 ?>
 <div class="col-sm-8">
@@ -28,6 +30,7 @@ $result=mysqli_query($conn,$sql1);
             </div>
             <div class="Current-Bid col-sm-4">
               <h4>Current Bid</h4>
+              <h5><?php echo $product['current_bid']; ?></h5>
             </div>
           </div>
       </div>
