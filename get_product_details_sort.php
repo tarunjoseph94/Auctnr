@@ -22,7 +22,7 @@ while($row=mysqli_fetch_assoc($result)){
         </a>
         <div class="item-details">
           <p>
-            From <?php echo $row['high_price']?>
+            Current Bid  <?php echo $row['high_price']?>
           </p>
           <p>
             <?php echo $row['product_name']?>
@@ -62,7 +62,7 @@ while($row=mysqli_fetch_assoc($result)){
         </a>
         <div class="item-details">
           <p>
-            From <?php echo $row['high_price']?>
+            Currently Bid <?php echo $row['high_price']?>
           </p>
           <p>
             <?php echo $row['product_name']?>
@@ -101,7 +101,7 @@ while($row=mysqli_fetch_assoc($result)){
         </a>
         <div class="item-details">
           <p>
-            From <?php echo $row['high_price']?>
+            Current Bid <?php echo $row['high_price']?>
           </p>
           <p>
             <?php echo $row['product_name']?>
@@ -121,7 +121,7 @@ $flag=1;
 }
 elseif($_REQUEST['id']==4)
 {
-$sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
+$sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price Current Bid product_details LEFT JOIN product_bid on
 product_details.product_id_pk=product_bid.product_id ORDER BY high_price DESC';
 $i=0;
 $flag=0;
@@ -141,7 +141,7 @@ while($row=mysqli_fetch_assoc($result)){
         </a>
         <div class="item-details">
           <p>
-            From <?php echo $row['high_price']?>
+            Current Bid <?php echo $row['high_price']?>
           </p>
           <p>
             <?php echo $row['product_name']?>

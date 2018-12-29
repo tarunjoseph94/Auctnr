@@ -400,6 +400,7 @@ $(document).ready(function () {
           }});
 
   });
+
   $('#sort-shop').on('change', function () {
       //alert( this.value );
     event.preventDefault();
@@ -430,6 +431,16 @@ $(document).ready(function () {
           url: "update_product_bid.php?id="+id+"&bid="+bid,
           success:function(result){
             alert(result);
+          }});
+
+  });
+  $('#buyer-my-products').on('click', function (event) {
+
+    event.preventDefault();
+          $.ajax({
+          url: "buyer_product_list.php",
+          success:function(result){
+            $("#buyer_info").html(result);
           }});
 
   });

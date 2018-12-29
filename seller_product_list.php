@@ -2,7 +2,7 @@
 include 'db-connect.php';
 session_start();
 $user_id=$_SESSION['user_id'];
-$sql1="SELECT product_image1,product_price,product_name ,product_bid.current_bid
+$sql1="SELECT product_id_pk,product_image1,product_price,product_name ,product_bid.current_bid
 FROM product_details LEFT JOIN product_bid ON
 product_details.product_id_pk=product_bid.product_id WHERE user_id='$user_id'";
 $result=mysqli_query($conn,$sql1);
@@ -34,10 +34,11 @@ $result=mysqli_query($conn,$sql1);
             </div>
           </div>
       </div>
+      <!-- <input type="hidden" id="product-id" value=""> -->
       <div class="col-sm-3">
           <div class="auctnr-btn-group ">
             <button  class="btn auctnr-btn mb-15 ">End Biding</button>
-            <button  class="btn auctnr-btn active">Remove Product</button>
+            <button  class="btn auctnr-btn active remove-product-seller" data-id="<?php echo $product['product_id_pk']; ?>">Remove Product</button>
           </div>
       </div>
     </div>
@@ -45,3 +46,19 @@ $result=mysqli_query($conn,$sql1);
 
 <?php } ?>
 </div>
+<script>
+
+$('.remove-product-seller').on('click', function (event) {
+  var id=$(this).data('id');
+  if(confirm("This is will delete your product"))
+  {
+  event.preventDefault();
+  //alert(id);
+        $.ajax({
+        url: "seller_product_delete_ajax.php?id="+id,
+        success:function(result){
+          $("#seller_info").html(result);
+        }});
+      }
+});
+</script>

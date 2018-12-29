@@ -68,7 +68,7 @@
 
 														<div class="item-details">
 															<p>
-																From <?php echo $row['high_price']?>
+																Current Bid  <?php echo $row['high_price']?>
 															</p>
 															<p>
 																<?php echo $row['product_name']?>
