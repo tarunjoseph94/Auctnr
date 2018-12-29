@@ -4,7 +4,7 @@ session_start();
 $user_id=$_SESSION['user_id'];
 $sql1="SELECT product_details.product_id_pk,product_details.product_image1,product_details.ship_ready,product_details.product_name ,
 product_ship.final_price,product_ship.shipping_status FROM product_ship LEFT JOIN product_details ON
-product_ship.product_id_pk=product_details.product_id_pk WHERE seller_id='$user_id'";
+product_ship.product_id_pk=product_details.product_id_pk WHERE buyer_id='$user_id'";
 $result=mysqli_query($conn,$sql1);
 ?>
 <div class="col-sm-12">
@@ -37,11 +37,11 @@ if($product['ship_ready']==1)
           <h4>Product Status</h4>
             <?php if($product['shipping_status']==1)
             {?>
-              Please ship your product to our office <a href="contact_us.php">Click here for more information</a>
+              PRoduct is being shiiped to our office
           <?php  } elseif($product['shipping_status']==2) {?>
-              Product is being verified by our employee.
+              Product is being verified by our employees.
         <?php  } elseif($product['shipping_status']==3) {?>
-              Product has been sucesfully verfied and has been sent to the customer.
+              Product has been sucesfully verfied and has been sent to you.
         <?php  } elseif($product['shipping_status']==4) {?>
               Product has failed verifcation and will been returned.
         <?php } ?>

@@ -39,27 +39,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-sm-12">
-					<div class="row footer_area">
-						<div class="col-sm-4">
-							<div class="logo-foot">
-
-							</div>
-						</div>
-						<div class="col-sm-8">
-							<div class="footer-link">
-								<ul>
-									<li>
-										<a href="index.php">Home</a>
-									</li>
-									<li>
-										<a href="shop.php">Shop</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+        	<?php include 'footer.php'; ?>
 			</div>
 		</div>
 	</body>

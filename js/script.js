@@ -468,6 +468,16 @@ $(document).ready(function () {
           }});
 
   });
+  $('#buyer-product-status').on('click', function (event) {
+
+    event.preventDefault();
+          $.ajax({
+          url: "buyer_product_status.php",
+          success:function(result){
+            $("#buyer_info").html(result);
+          }});
+
+  });
   $('#login-admin-submit').on('click', function (event) {
 
     event.preventDefault();
