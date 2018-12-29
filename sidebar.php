@@ -32,6 +32,15 @@ echo '
               </div>
               ';
             }
+            elseif ($_SESSION['login_status']==3) {
+              echo '
+              <!-- Button Group -->
+              <div class="auctnr-btn-group mt-30 mb-100">
+                  <a href="admin_profile.php" class="btn auctnr-btn mb-15 ">My profile</a>
+                  <button id="logout" class="btn auctnr-btn active">Log Out</button>
+              </div>
+              ';
+            }
             else
             {
               echo '

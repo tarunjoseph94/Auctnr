@@ -23,9 +23,18 @@ if(mysqli_num_rows($result) == 0 || mysqli_num_rows($result) == '' )
 }
 else
 {
-  $sql2="UPDATE product_bid SET user_id_fk='$user_id',current_bid='$product_bid'";
-  mysqli_query($conn,$sql2);
-  echo "Your bid has been placed";
+  $bid=$result->fetch_assoc();
+  $bid=$bid['current_bid'];
+  if($product_bid>$bid)
+  {
+    $sql2="UPDATE product_bid SET user_id_fk='$user_id',current_bid='$product_bid'";
+    mysqli_query($conn,$sql2);
+    echo "Your bid has been placed";
+  }
+  else {
+    echo "Bid amount has to be larger than the current bid";
+  }
+
 }
 
 ?>

@@ -63,6 +63,8 @@
 										<h4><?php echo $product_price;?></h4>
 									</div>
 									<div class="product-bid">
+										<?php if($_SESSION['login_status']==1)
+										{?>
 										<form method="post">
 											<h3>Your Bid</h3>
 											<input type="hidden" id="current-bid"/>
@@ -70,6 +72,11 @@
 											<input type="number" id="new-bid" class ="form-control"/>
 											<button type="button" class="btn active mt-15" id="add-buyer-bid" name="button">Submit Bid</button>
 										</form>
+									<?php }else {
+										?>
+											<h6>Log in as a buyer to place a bid</h6>
+										<?php
+									}?>
 									</div>
 								</div>
 							</div>
@@ -103,7 +110,7 @@
 			</div>
 		</div>
 	</body>
-	
+
 	<script>
 	var slideIndex = 1;
 	showSlides(slideIndex);

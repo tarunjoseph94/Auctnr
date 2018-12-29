@@ -37,8 +37,13 @@ $result=mysqli_query($conn,$sql1);
       <!-- <input type="hidden" id="product-id" value=""> -->
       <div class="col-sm-3">
           <div class="auctnr-btn-group ">
-            <button  class="btn auctnr-btn mb-15 ">End Biding</button>
-            <button  class="btn auctnr-btn active remove-product-seller" data-id="<?php echo $product['product_id_pk']; ?>">Remove Product</button>
+            <?php
+            if($product['current_bid'])
+            {
+              ?>
+              <button  class="btn auctnr-btn active mb-15 end-bid" data-id="<?php echo $product['product_id_pk']; ?>">End Biding</button>
+            <?php  }?>
+            <button  class="btn auctnr-btn  remove-product-seller" data-id="<?php echo $product['product_id_pk']; ?>">Remove Product</button>
           </div>
       </div>
     </div>
@@ -56,6 +61,19 @@ $('.remove-product-seller').on('click', function (event) {
   //alert(id);
         $.ajax({
         url: "seller_product_delete_ajax.php?id="+id,
+        success:function(result){
+          $("#seller_info").html(result);
+        }});
+      }
+});
+$('.end-bid').on('click', function (event) {
+  var id=$(this).data('id');
+  if(confirm("This is will end sale of your product"))
+  {
+  event.preventDefault();
+  //alert(id);
+        $.ajax({
+        url: "seller_product_end_bid_ajax.php?id="+id,
         success:function(result){
           $("#seller_info").html(result);
         }});
