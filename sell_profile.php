@@ -24,6 +24,7 @@
               <li class=" mt-15"><a class="side" id="seller-add-product">Add Products</a></li>
 							<li class=" mt-15"><a class="side" id="seller-my-profile">Edit my Profile</a></li>
               <li class=" mt-15"><a class="side" id="seller-my-products">My Products</a></li>
+              <li class=" mt-15"><a class="side" id="seller-product-status">Product Status</a></li>
 						</ul>
 					</div>
 				</div>
@@ -62,6 +63,6 @@
 			</div>
 		</div>
 	</body>
-	<script src="js/bootstrap.min.js"></script>
+
 
 </html>

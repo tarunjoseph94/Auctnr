@@ -400,7 +400,16 @@ $(document).ready(function () {
           }});
 
   });
+  $('#seller-product-status').on('click', function (event) {
 
+    event.preventDefault();
+          $.ajax({
+          url: "seller_product_status.php",
+          success:function(result){
+            $("#seller_info").html(result);
+          }});
+
+  });
   $('#sort-shop').on('change', function () {
       //alert( this.value );
     event.preventDefault();
@@ -503,5 +512,15 @@ $(document).ready(function () {
         }
   });
 
+  $('#admin-verify-products').on('click', function (event) {
+
+    event.preventDefault();
+          $.ajax({
+          url: "admin_verify_product.php",
+          success:function(result){
+            $("#admin_info").html(result);
+          }});
+
+  });
 
 });

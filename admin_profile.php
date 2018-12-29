@@ -21,14 +21,13 @@
 				<div class="col-sm-2">
 					<div class="auctnr-nav  mt-50">
 						<ul>
-							<li class=" mt-15"><a class="side" id="">Edit my Profile</a></li>
-              <li class=" mt-15"><a class="side" id="">My Products</a></li>
+              <li class=" mt-15"><a class="side" id="admin-verify-products">Verify Products</a></li>
 						</ul>
 					</div>
 				</div>
 				<!-- Customer dashboard End-->
 				<div class="col-md-8">
-					<div id="buyer_info" class="mt-30">
+					<div id="admin_info" class="mt-30">
 
           </div>
 					</div>

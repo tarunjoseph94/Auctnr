@@ -2,14 +2,14 @@
 include 'db-connect.php';
 session_start();
 $user_id=$_SESSION['user_id'];
-$sql1="SELECT product_id_pk,product_image1,product_price,product_name,ship_ready ,product_bid.current_bid
-FROM product_details LEFT JOIN product_bid ON
-product_details.product_id_pk=product_bid.product_id WHERE user_id='$user_id'";
+$sql1="SELECT product_details.product_id_pk,product_image1,ship_ready,product_name ,
+product_ship.final_price,product_ship.shipping_status FROM product_details LEFT JOIN product_ship ON
+product_details.product_id_pk=product_ship.product_id_pk WHERE user_id='$user_id'";
 $result=mysqli_query($conn,$sql1);
 ?>
-<div class="col-sm-12 ">
+<div class="col-sm-12">
 <?php while ($product=mysqli_fetch_assoc($result)) {
-if($product['ship_ready']==0)
+if($product['ship_ready']==1)
 {
 ?>
   <div class="mt-30">
@@ -21,31 +21,25 @@ if($product['ship_ready']==0)
       </div>
       <div class="col-sm-6">
           <div class="row">
-            <div class="product-title col-sm-4">
+            <div class="product-title col-sm-6">
               <h4>Product Name</h4>
               <h5><?php echo $product['product_name']; ?></h5>
             </div>
-            <div class="product-price col-sm-4">
-              <h4>Start Price</h4>
-              <h5><?php echo $product['product_price']; ?></h5>
-            </div>
-            <div class="Current-Bid col-sm-4">
-              <h4>Current Bid</h4>
-              <h5><?php echo $product['current_bid']; ?></h5>
+            <div class="Final-price col-sm-6">
+              <h4>Final price</h4>
+              <h5><?php echo $product['final_price']; ?></h5>
             </div>
           </div>
       </div>
       <!-- <input type="hidden" id="product-id" value=""> -->
       <div class="col-sm-3">
-          <div class="auctnr-btn-group ">
-            <?php
-            if($product['current_bid'])
-            {
-              ?>
-              <button  class="btn auctnr-btn active mb-15 end-bid" data-id="<?php echo $product['product_id_pk']; ?>">End Biding</button>
-            <?php  }?>
-            <button  class="btn auctnr-btn  remove-product-seller" data-id="<?php echo $product['product_id_pk']; ?>">Remove Product</button>
-          </div>
+        <div class="shipping-status">
+          <h4>Product Status</h4>
+            <?php if($product['shipping_status']==1)
+            {?>
+              Please ship your product to our office <a href="shipping_details.php">Click here for more information</a>
+          <?php  } ?>
+        </div>
       </div>
     </div>
   </div>

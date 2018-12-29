@@ -13,6 +13,8 @@ $final_price=$product['current_bid'];
 $sql2="INSERT INTO product_ship (product_id_pk, seller_id, buyer_id, final_price,
   shipping_status) VALUES ('$product_id','$seller_id','$buyer_id','$final_price',1)";
 mysqli_query($conn,$sql2);
-$sql3="DELETE FROM product_details WHERE product_id_pk='$id'";
+$sql3="DELETE FROM product_bid WHERE product_id='$id'";
 mysqli_query($conn,$sql3);
+$sql4="UPDATE product_details SET ship_ready=1 where product_id_pk='$id'";
+mysqli_query($conn,$sql4);
 ?>
