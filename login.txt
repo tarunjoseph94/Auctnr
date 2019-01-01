@@ -10,7 +10,15 @@ Buyer
 User: tarunjoseph@gmail.com
 password: buy123
 
+User: buyer@gmail.com
+password: buyer123
+
+
 Seller
 ------
 User: seller@gmail.com
-password: seller123 
+password: seller123
+
+User: shop@gmail.com
+password: shop123
+ 

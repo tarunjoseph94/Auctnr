@@ -452,7 +452,7 @@ $(document).ready(function () {
     if(bid>oldbid)
     {
 
-      confirm("Please cconfirm bid amount "+bid)
+      confirm("Please confirm bid amount "+bid)
       {
           $.ajax({
           url: "update_product_bid.php?id="+id+"&bid="+bid,
