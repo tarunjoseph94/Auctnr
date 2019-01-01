@@ -32,10 +32,10 @@
 									Newest Products
 								</option>
 								<option value="3">
-									Price Lowest to Highest
+									Price: Low to High
 								</option>
 								<option value="4">
-									Price Highest to Lowest
+									Price: High to Low
 								</option>
 
 							</select>

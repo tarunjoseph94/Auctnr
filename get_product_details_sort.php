@@ -5,7 +5,6 @@ if($_REQUEST['id']==1)
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
 product_details.product_id_pk=product_bid.product_id ORDER BY product_id_pk ASC';
 $i=0;
-$flag=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
   if($i%3==0)
@@ -31,12 +30,12 @@ while($row=mysqli_fetch_assoc($result)){
       </div>
     </div>
   <?php
-  if($i%3==0 && $flag==1)
+  if($i%3==2)
   {?>
   </div>
         <?php
   } $i++;
-$flag=1;
+
 }
 
 }
@@ -45,7 +44,6 @@ elseif($_REQUEST['id']==2)
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
 product_details.product_id_pk=product_bid.product_id ORDER BY product_id_pk DESC';
 $i=0;
-$flag=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
   if($i%3==0)
@@ -71,12 +69,11 @@ while($row=mysqli_fetch_assoc($result)){
       </div>
     </div>
   <?php
-  if($i%3==0 && $flag==1)
+  if($i%3==2)
   {?>
   </div>
         <?php
   } $i++;
-$flag=1;
 }
 }
 elseif($_REQUEST['id']==3)
@@ -84,7 +81,6 @@ elseif($_REQUEST['id']==3)
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
 product_details.product_id_pk=product_bid.product_id ORDER BY high_price ASC';
 $i=0;
-$flag=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
   if($i%3==0)
@@ -110,21 +106,19 @@ while($row=mysqli_fetch_assoc($result)){
       </div>
     </div>
   <?php
-  if($i%3==0 && $flag==1)
+  if($i%3==2)
   {?>
   </div>
         <?php
   } $i++;
-$flag=1;
 }
 
 }
 elseif($_REQUEST['id']==4)
 {
-$sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price Current Bid product_details LEFT JOIN product_bid on
+$sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price FROM product_details LEFT JOIN product_bid on
 product_details.product_id_pk=product_bid.product_id ORDER BY high_price DESC';
 $i=0;
-$flag=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
   if($i%3==0)
@@ -150,12 +144,11 @@ while($row=mysqli_fetch_assoc($result)){
       </div>
     </div>
   <?php
-  if($i%3==0 && $flag==1)
+  if($i%3==2)
   {?>
   </div>
         <?php
   } $i++;
-$flag=1;
 }
 
 }
