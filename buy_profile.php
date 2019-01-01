@@ -36,11 +36,11 @@
 
 
 			</div>
-
+      </div>
 			<div class="row">
         	<?php include 'footer.php'; ?>
 			</div>
-		</div>
+
 	</body>
 	<script src="js/bootstrap.min.js"></script>
 

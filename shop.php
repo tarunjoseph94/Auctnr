@@ -51,7 +51,6 @@
 									<div id="sorted">
 										<?php $id=1;
 										$i=0;
-										$flag=0;
 										include 'get_product_details_all.php';
 										while($row=mysqli_fetch_assoc($result)){
 											if($i%3==0)
@@ -78,12 +77,12 @@
 													</div>
 												</div>
 											<?php
-											if($i%3==0 && $flag==1)
+											if($i%3==2)
 											{?>
 											</div>
 														<?php
 											} $i++;
-										$flag=1;
+
 									} ?>
 
 											</div>
@@ -96,10 +95,11 @@
 					</div>
 				</div>
 			</div>
+			</div>
 			<div class="row">
 					<?php include 'footer.php'; ?>
 			</div>
-		</div>
+
 	</body>
 	<script src="js/bootstrap.min.js"></script>
 

@@ -37,11 +37,11 @@
 
 
 			</div>
-
+      </div>
 			<div class="row">
         	<?php include 'footer.php'; ?>
 			</div>
-		</div>
+
 	</body>
 
 

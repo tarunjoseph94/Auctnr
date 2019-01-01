@@ -69,9 +69,9 @@
 		    width: 155px;
 
 			}
-			.red-bg {
-		    background: red;
-		    min-height: 500px;
+			.main-content
+			{
+				min-height: 415px;
 			}
 			.short-box {
 		    background-color: green;
@@ -82,20 +82,13 @@
 				} */
 				.long-box {
 		    height: 270px;
+				overflow: hidden;
+				margin-bottom: 20px;
 		}
 		.short-box {
 		    height: 250px;
 		}
-		.short-box.card {
-    overflow: hidden;
-		}
-		.long-box.card {
-    overflow: hidden;
-		}
-		.card
-		{
-			border: none;
-		}
+
 .item-details {
     position: absolute;
     z-index: 5;
