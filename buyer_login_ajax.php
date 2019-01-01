@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   {
 
     $sql1="SELECT buyer_password,user_id_fk from buyer_details WHERE buyer_email='$email'";
-    echo $sql1;
+    //echo $sql1;
     $result=mysqli_query($conn,$sql1);
     $user=$result->fetch_assoc();
     $user_pwd=$user['buyer_password'];
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       //echo $_SESSION['login_status'];
     }
       else {
-      echo "Error: ";
+      echo "Error";
       }
 
   }

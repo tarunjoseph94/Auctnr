@@ -3,7 +3,7 @@
 echo '
     <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="images/core-img/logo.png" alt=""></a>
+                <a href="index.php"><img src="images/core-img/logo.png" alt=""></a>
             </div>
             <!-- auctnr Nav -->
             <nav class="auctnr-nav mt-30">

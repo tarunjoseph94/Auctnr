@@ -1,0 +1,16 @@
+Logins
+
+Admin
+------
+User: admin
+Password: admin
+
+Buyer
+------
+User: tarunjoseph@gmail.com
+password: buy123
+
+Seller
+------
+User: seller@gmail.com
+password: seller123 

@@ -302,8 +302,14 @@ $(document).ready(function () {
           data:formData,
           success:function(result)
           {
-            $("#test").html(result);
-            window.location.replace("http://localhost/PHP-Project/index.php");
+            if(result=='Error')
+            {
+              alert("Email or password does not exist");
+            }
+            else {
+              alert("Sucesfully logged in");
+              window.location.replace("http://localhost/PHP-Project/index.php");
+            }
           }
           });
         }
@@ -353,8 +359,14 @@ $(document).ready(function () {
           data:formData,
           success:function(result)
           {
-            alert(result);
-            window.location.replace("http://localhost/PHP-Project/index.php");
+            if(result=='Error')
+            {
+              alert("Email or password does not exist");
+            }
+            else {
+              alert("Sucesfully logged in");
+              window.location.replace("http://localhost/PHP-Project/index.php");
+            }
           }
           });
         }
@@ -440,12 +452,15 @@ $(document).ready(function () {
     if(bid>oldbid)
     {
 
-
+      confirm("Please cconfirm bid amount "+bid)
+      {
           $.ajax({
           url: "update_product_bid.php?id="+id+"&bid="+bid,
           success:function(result){
             alert(result);
+            window.location.replace("http://localhost/PHP-Project/product-details.php?id="+id);
           }});
+      }
     }
     else {
       alert("Please bid amount greater then the current price");
@@ -515,8 +530,14 @@ $(document).ready(function () {
           data:formData,
           success:function(result)
           {
-            alert(result);
-            window.location.replace("http://localhost/PHP-Project/index.php");
+            if(result=='Error')
+            {
+              alert("Username or password does not exist");
+            }
+            else {
+              alert("Sucesfully logged in");
+              window.location.replace("http://localhost/PHP-Project/index.php");
+            }
           }
           });
         }

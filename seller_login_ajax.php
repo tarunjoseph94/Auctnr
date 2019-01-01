@@ -44,10 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $_SESSION['login_status']=2;
       $_SESSION['user_id']=$user_id;
     //  echo $_SESSION['login_status'];
-    echo "Sucessfully logged in";
+  //  echo "Sucessfully logged in";
     }
       else {
-      echo "User name or Password is incorrect";
+      echo "Error";
       }
 
   }

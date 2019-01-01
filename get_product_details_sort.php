@@ -3,7 +3,7 @@ include 'db-connect.php';
 if($_REQUEST['id']==1)
 {
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
-product_details.product_id_pk=product_bid.product_id ORDER BY product_id_pk ASC';
+product_details.product_id_pk=product_bid.product_id WHERE product_details.ship_ready!=1 ORDER BY product_id_pk ASC';
 $i=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
@@ -42,7 +42,7 @@ while($row=mysqli_fetch_assoc($result)){
 elseif($_REQUEST['id']==2)
 {
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
-product_details.product_id_pk=product_bid.product_id ORDER BY product_id_pk DESC';
+product_details.product_id_pk=product_bid.product_id WHERE product_details.ship_ready!=1 ORDER BY product_id_pk DESC';
 $i=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
@@ -79,7 +79,7 @@ while($row=mysqli_fetch_assoc($result)){
 elseif($_REQUEST['id']==3)
 {
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price from product_details LEFT JOIN product_bid on
-product_details.product_id_pk=product_bid.product_id ORDER BY high_price ASC';
+product_details.product_id_pk=product_bid.product_id WHERE product_details.ship_ready!=1 ORDER BY high_price ASC';
 $i=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
@@ -117,7 +117,7 @@ while($row=mysqli_fetch_assoc($result)){
 elseif($_REQUEST['id']==4)
 {
 $sql1='SELECT *, IF(product_bid.current_bid>product_details.product_price,product_bid.current_bid,product_details.product_price) as high_price FROM product_details LEFT JOIN product_bid on
-product_details.product_id_pk=product_bid.product_id ORDER BY high_price DESC';
+product_details.product_id_pk=product_bid.product_id WHERE product_details.ship_ready!=1 ORDER BY high_price DESC';
 $i=0;
 $result=mysqli_query($conn,$sql1);
 while($row=mysqli_fetch_assoc($result)){
