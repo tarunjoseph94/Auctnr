@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email=$_POST['email'];
 
   $pwd=$_POST['password'];
+  
   $flag=0;
   if (empty($email)) {
     $flag=1;
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   {
     $flag=1;
   }
-
+  
 
   if($flag==0)
   {
@@ -38,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_pwd=$user['buyer_password'];
     //echo $user_pwd;
     //echo " xyz ".$pwd;
+    $pwd=md5($pwd);
     if($pwd==$user_pwd)
     {
       $_SESSION['login_status']=1;

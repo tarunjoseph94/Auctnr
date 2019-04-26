@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if($flag==0)
   {
-
+    $pwd=md5($pwd);
     $sql1="SELECT seller_password,user_id_fk from seller_details WHERE seller_email='$email'";
     //echo $sql1;
     $result=mysqli_query($conn,$sql1);

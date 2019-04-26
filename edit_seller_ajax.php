@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if($flag==0)
   {
-
+    $pwd=md5($pwd);
     $sql1="UPDATE seller_details SET seller_name='$name',seller_password='$pwd',seller_mobile='$mobile',
     seller_address='$address',seller_pin='$pin' WHERE user_id_fk='$user_id'";
     if (mysqli_query($conn, $sql1)) {

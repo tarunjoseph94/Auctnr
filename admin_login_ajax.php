@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if($flag==0)
   {
-
+    $pwd=md5($pwd);
 //      echo "11";
     $sql1="SELECT admin_pwd from admin_details WHERE admin_name_pk='$email'";
   //  echo $sql1;

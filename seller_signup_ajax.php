@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if($flag==0)
   {
-
+    $pwd=md5($pwd);
     $sql1="INSERT INTO user( user_type, user_email) VALUES (3,'$email')";
     $sql2="SELECT user_id_pk from USER WHERE user_email='$email'";
     echo $sql1;
